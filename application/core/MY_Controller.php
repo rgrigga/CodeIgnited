@@ -3,6 +3,14 @@
 class MY_Controller extends CI_Controller {
 
     public $template;
+    // public $nav=$this->load->view('partials/primary-nav');
+    
+    // public $partials=array(
+    //     'nav'=>'partials/primary-nav',
+    //     'header'=>'primary-header',
+    //     'footer'=>'primary-footer'
+    //     );
+
     public $data = array('message' => false);
     public $isApi = false;
     public $out = array('success' => true);
@@ -11,6 +19,13 @@ class MY_Controller extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+
+        //Here we will construct some default partial views
+        $this->data['nav']='partials/nav/default-nav';
+        $this->data['header']='partials/default-header';
+        $this->data['secondary']='partials/default-secondary';
+        $this->data['footer']='partials/default-footer';
+
         $this->load->helper('url');
 
         if ($this->template == '') {
@@ -26,7 +41,7 @@ class MY_Controller extends CI_Controller {
                 if (!$this->ion_auth->logged_in()) {
                     if (!in_array($this->router->class, $this->allowedControllers)) {
                         //comment this out if you don't want authentication at all:
-                        redirect('/login');
+                        // redirect('/login');
                     }
                 } else {
                     $this->data['user'] = $this->ion_auth->user()->row();
@@ -38,6 +53,10 @@ class MY_Controller extends CI_Controller {
         } else {
             $this->isCLI = true;
         }
+    }
+
+    public function index(){
+        $this->load->view('partials/default-primary');
     }
 
     public function _output() {
@@ -57,6 +76,10 @@ class MY_Controller extends CI_Controller {
                 $d[$k]=$v;
             }
             if (!$this->view) {
+                // class/method/data
+                // for example: http://myapp.dev/welcome
+                // this will automatically load
+                // views/welcome/index
                 $d['content'] = $this->load->view($this->router->class . '/' . $this->router->method, $this->data, true);
             } else {
                 $d['content'] = $this->load->view($this->view, $this->data, true);

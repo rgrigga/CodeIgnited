@@ -38,9 +38,23 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['news/create'] = 'news/create';
+$route['news/(:any)'] = 'news/view/$1';
+$route['news'] = 'news';
+
+//Demo:
+$route['demo/(:any)'] = 'demo/page/$1';
+$route['demo'] = 'demo';
+// $route['(:any)'] = 'pages/view/$1';
+// $route['default_controller'] = 'pages/view';
+
+
+
+
+// $route['default_controller'] = 'auth';
 
 //welcome:
+$route['welcome'] = "welcome/index";
 $route['contact'] = "welcome/contact";
 $route['pricing'] = "welcome/pricing";
 
@@ -55,8 +69,10 @@ $route['projects/(:num)'] = "projects/index/$1";
 //app
 $route['apps/(:num)'] = "apps/index/$1";
 
+
+$route['default_controller'] = 'welcome';
 //404:
-$route['404_override'] = '';
+$route['404_override'] = 'errors/404';
 
 
 /* End of file routes.php */

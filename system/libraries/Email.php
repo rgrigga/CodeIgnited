@@ -701,6 +701,13 @@ class CI_Email {
 	 */
 	protected function _set_date()
 	{
+		//Timezone error?
+		//http://stackoverflow.com/questions/16765158/date-it-is-not-safe-to-rely-on-the-systems-timezone-settings-in-codeigniter
+		//Edit php.ini to reflect:
+		//    date.timezone = America/New_York
+		//and then 
+		//    sudo service apache2 restart
+		
 		$timezone = date("Z");
 		$operator = (strncmp($timezone, '-', 1) == 0) ? '-' : '+';
 		$timezone = abs($timezone);

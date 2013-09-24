@@ -1,5 +1,5 @@
 <?php
- 
+die("DEPRECIATED - use public/index");
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
