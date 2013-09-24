@@ -18,7 +18,8 @@ My Changes
     * primary
     * secondary (sidebar, etc)
     * footer
-Each of the sections has a default "partial", but they can be overridden at the "global" level, in the controller, or on a per-project bases.  The "demo" area is the best example.
+
+...Each of the sections has a default "partial", but they can be overridden at the "global" level, in the controller, or on a per-project bases.  The "demo" area is the best example.
 5. I set up automatic, synchronized content between my local dev Environment and my webserver.  To learn more, visit my live, working demo, at [ci.gristech.com](http://ci.gristech.com/demo)
 
 
