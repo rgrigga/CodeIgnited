@@ -1,3 +1,21 @@
+Codeigniter Demo
+================
+
+Please note: the bulk of this project belongs to Jason Crider: 
+Please visit the *[Original Project](https://github.com/xylude/CodeIgnited).*, or the original docs are located below.
+
+My Changes
+----------
+
+1. I disabled auth for the time being... more correctly, I circumvented it.
+2. I completed the codeignited demo, and the "news" function works, complete with database.
+3. I set up a "demo" section with a simple automatic routing proceedure.  Add a file to the demo folder, and it will automatically appear in 
+4. I set up automatic, synchronized content between my local dev environment and my webserver.  For a live, working demo, visit [ci.gristech.com](http://ci.gristech.com)
+
+***
+Original Docs
+===
+
 ##Setup
 To set up your new CI project, you will need to set some configurations. 
 
