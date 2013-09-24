@@ -1,0 +1,3 @@
+<footer>
+	Demo footer
+</footer>
