@@ -13,11 +13,11 @@ My Changes
 2. I completed the codeigniter tutorial from their docs, so the "news" function works, complete with database.
 3. I set up a "demo" section with a simple automatic routing proceedure.  Add a file to the demo folder, and it will automatically appear in the navigation,
 4. I made some changes to the templating process, and the default controller logic related to that... it's basically set up with 5 main sections:
-* header
-* nav
-* primary
-* secondary (sidebar, etc)
-* footer
+    * header
+    * nav
+    * primary
+    * secondary (sidebar, etc)
+    * footer
 Each of the sections has a default "partial", but they can be overridden at the "global" level, in the controller, or on a per-project bases.  The "demo" area is the best example.
 5. I set up automatic, synchronized content between my local dev Environment and my webserver.  To learn more, visit my live, working demo, at [ci.gristech.com](http://ci.gristech.com/demo)
 
