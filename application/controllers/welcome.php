@@ -14,13 +14,15 @@ class Welcome extends MY_Controller {
 
         parent::__construct();
         
-        $this->template='template/megacorp';
+        // $this->template='template/default';
         $this->data['nav']='partials/nav/default-nav';
 
     }
 
     public function index() {
-        $this->load->view('welcome/index');
+      $this->data['message']="This is a message passed into the template";
+      $data['mymessage']="This message is passed directly to the view.";
+      $this->load->view('welcome/index',$data);
     }
 
 }

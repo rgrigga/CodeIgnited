@@ -1,5 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+date_default_timezone_set('America/New_York');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -14,7 +15,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://ci.gristech.com/';
+$config['base_url']	= 'http://codeignited.dev/';
 
 /*
 |--------------------------------------------------------------------------

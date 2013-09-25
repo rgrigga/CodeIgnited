@@ -5,6 +5,7 @@ class Demo extends MY_Controller {
     public function __construct() {
 
         parent::__construct();
+        $this->load->library('gristech');
         
         $this->template='template/megacorp';
 
@@ -15,8 +16,12 @@ class Demo extends MY_Controller {
     }
 
     public function index() {
-        $this->load->view('welcome/index');
+        $this->data['message']="ba-da-bing";
+        $data['message']="ba-da-boom";
+        $this->load->view('demo/index',$data);
+
         // $this->load->view('demo/pages/alpha');
+
     }
 
     private function pages($slug="home"){
@@ -34,6 +39,7 @@ class Demo extends MY_Controller {
       // $this->view="demo/pages/".$slug;
       $data['slug']=$slug;
       $data['title']="Demonstration";
+      $data['message']="ba-da-boom";
       $data['content']=$this->pages($slug);
 
       $this->load->view('demo/pages/'.$slug,$data);

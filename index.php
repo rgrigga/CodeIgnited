@@ -1,5 +1,13 @@
 <?php
-die("DEPRECIATED - use public/index");
+// die("DEPRECIATED - use public/index");
+$_SERVER['HTTP_HOST'] = "http://localhost/index.php/";
+
+// Comment out line 1 above and uncomment line 2 to work with this file from the command line only- for example, when running migrations.
+
+// Replace when done. Perhaps this could be better handled via environments and such, but this works for now.  Enjoy!
+
+
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -18,7 +26,7 @@ die("DEPRECIATED - use public/index");
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
+	define('ENVIRONMENT', 'CLI');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -32,6 +40,10 @@ if (defined('ENVIRONMENT'))
 {
 	switch (ENVIRONMENT)
 	{
+		case 'CLI':
+			error_reporting(E_ALL);
+		break;
+
 		case 'development':
 			error_reporting(E_ALL);
 		break;

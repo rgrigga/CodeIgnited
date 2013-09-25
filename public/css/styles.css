@@ -82,7 +82,10 @@ h6 {
 }
 
 .nav {
-    background: url(../images/navbg.jpg) repeat-x;
+    width: 100%;
+    padding: 10px;
+    background-color: #666;
+    /*background: url(../images/navbg.jpg) repeat-x;*/
     color: #fff;
     font-weight:600;
 }
@@ -95,11 +98,16 @@ h6 {
     padding:0 10px 0 10px;
 }
 .nav a {
+    padding: 10px;
     background-color: #999;
     color: #fff;
     text-decoration:none;
 }
 
+.nav li.nav-label{
+    /*color: #666;*/
+    /*background-color: #aaa;*/
+}
 .nav a:hover {
     background-color: #555;
     color: #fff;
@@ -192,7 +200,18 @@ select {
     padding:0 10px 0 10px;
 }
 
+#secondary{
+    /*width: 100%;*/
+    padding:20px;
+    background-color: rgba(0,0,50,.5);
+}
+
 blockquote{
     padding: 20px;
     background-color: gray;
+}
+
+.alert{
+    color:rgba(200,0,0,1);
+    background-color: rgba(100,0,0,.3);
 }
