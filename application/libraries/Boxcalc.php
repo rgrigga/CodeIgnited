@@ -2,15 +2,17 @@
 
 class Boxcalc{
 
-private $shipping_container;
-private $items;
+private $containers=array();//one or more shipping containers
+private $items = array();//one or more items
 
-function __construct(){
-	
+	function __construct(){
+		$this->items=array();
+	}
+	public function hello(){
+		echo "Howdy";
+	}
+
 }
-
-}
-
 
 class Genericbox{
 	private $height;
@@ -61,7 +63,7 @@ Class ShippingBox extends GenericBox{
 	}
 }
 
-Class BoxCollection{
+Class BoxCollection implements Iterator, Collection{
 	
 	private $boxes = array();
 

@@ -1,9 +1,5 @@
 <section id="secondary">
-	<p>See my other pages sometime:</p>
-	<div class="nav">
-		<ul>
-			<li><a href="http://myapp.gristech.com">MyApp</a></li>
-			<li><a href="http://gristech.com">Wordpress</a></li>
-		</ul>
-	</div>
+	<h2>Recent Developments:</h2>
+	<p class="muted credit">aka "recent news"</p>
+	<?= $this->load->view('news/blocks', $news); ?>
 </section>

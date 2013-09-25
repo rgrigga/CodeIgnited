@@ -1,4 +1,4 @@
 <header>
-	demo header
 
+	demo header
 </header>
