@@ -1,7 +1,5 @@
 <h1>Charlie</h1>
 
-
-
     <p>Here's a visualization of the main presentation structure for our templates:</p>
     <div class="shaded">
       body

@@ -3,10 +3,7 @@
 <p>And another array of various sized shipping containers</p>
 <p>Calculate the smallest combination of boxes to use.</p>
 
-
 <?php
-
-
 
 $array=array(
 	"containers"=>array(

@@ -20,8 +20,16 @@ class Welcome extends MY_Controller {
     }
 
     public function index() {
-      $this->data['message']="This is a message passed into the template";
-      $data['mymessage']="This message is passed directly to the view.";
+
+$str=htmlentities("\$this->data['message']='foo'");
+$str="<code>".$str."</code>";
+
+$str2=htmlentities("\$data['mymessage']='bar'");
+$str2="<code>".$str2."</code>";
+
+
+      $this->data['message']="This is a message passed \"into the template\": ".$str;
+      $data['mymessage']="This message is passed \"directly to the view\": ".$str2;
       $this->load->view('welcome/index',$data);
     }
 

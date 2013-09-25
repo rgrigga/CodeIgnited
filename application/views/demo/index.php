@@ -5,14 +5,13 @@
 ?>
 
 <p>This is the demo index page.  It's a sandbox!</p>
-<h2>My Commandments</h2>
-<ol>
-	<li>Whenever possible, thou shalt seperate thy concerns.</li>
-</ol>
+<h2>The First Commandment:</h2>
+<blockquote>Whenever possible, thou shalt seperate thy concerns.</blockquote>
+
 
 <h2>What we're demonstrating</h2>
 
-<p>Please note we're demonstrating a number of techniques here:</p>
+<p>Please note we're demonstrating a number of techniques throughout this site:</p>
 <ul>
 	<li>Demo Template</li>
 	<li>Demo Controller</li>
