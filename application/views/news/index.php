@@ -1,7 +1,7 @@
 
-<div id="infoMessage"><?php echo $message;?></div>
+<div class="alert"><?php echo $message;?></div>
 
-<p>This is the news demo - it's what you create following the tutorial from the codeignited docs.</p>
+<p>This is the news index: The "news" system is what you'll create if you follow the tutorial from the codeigniter docs. <em>There are many like it, but this one is mine.</em></p>
 
 <h1>What's Happening:</h1>
 <?php foreach ($news as $news_item): ?>

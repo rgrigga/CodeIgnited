@@ -1,11 +1,12 @@
 <?php
-class News extends CI_Controller {
+class News extends MY_Controller {
 
 	private $message = "";
 
 	public function __construct()
 	{
 		parent::__construct();
+		$this->template="template/demo";
 		$this->load->model('news_model');
 	}
 
@@ -16,9 +17,11 @@ class News extends CI_Controller {
 		$data['title'] = 'News archive';
 		$data['message'] = $this->message;
 
-		$this->load->view('template/header', $data);
+		$this->data['header']='demo/partials/header';
+
+		// $this->load->view('template/header', $data);
 		$this->load->view('news/index', $data);
-		$this->load->view('template/footer');
+		// $this->load->view('template/footer');
 	}
 
 	public function view($slug)
@@ -50,15 +53,18 @@ class News extends CI_Controller {
 
 		if ($this->form_validation->run() === FALSE)
 		{
+			//From the demo:
 			$this->load->view('template/header', $data);
 			$this->load->view('news/create');
 			$this->load->view('template/footer');
-
 		}
+
 		else
 		{
 			$this->news_model->set_news();
 			$this->load->view('news/success');
 		}
 	}
+
+	//Coming soon: Update and Delete!
 }

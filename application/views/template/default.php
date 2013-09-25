@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Blank Project</title>
+        <link rel="shortcut icon" href="<?= base_url() ?>/img/thinker/favicon.png">
         <link rel="stylesheet" href="/css/styles.css" />
         <script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>

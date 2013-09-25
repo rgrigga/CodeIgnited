@@ -15,39 +15,25 @@ class Demo extends MY_Controller {
         $this->data['secondary']='demo/partials/secondary';
         $this->data['footer']='demo/partials/footer';
         $this->data['news'] = $this->news_model->get_news();
-        $this->data['message'] = ENVIRONMENT." environment";
+
+        //Promoted to MY_Controller:
+        // $this->data['message'] = ENVIRONMENT." environment";
     }
 
     public function index() {
-        $this->data['message']="ba-da-bing";
-        $data['message']="ba-da-boom";
+      $data['title']="Demo Index";
+        // $this->data['message']="ba-da-bing";
+        // $data['message']="ba-da-boom";
         $this->load->view('demo/index',$data);
-
-        // $this->load->view('demo/pages/alpha');
-
     }
 
-    // private function pages($slug="home"){
-      
-    //   // $data['slug']=$slug;
-    //   // $data['title']="Demonstration";
-      
-    //   // $this->view="demo/pages/".$slug;
-    //   // die(var_dump($this->view));
-    //   // var_dump($this->view);
-    //   // die();
-    // }
-
     public function page($slug="home"){
-      // die("BAM");
-      // $this->view="demo/pages/".$slug;
+
       $data['slug']=$slug;
-      $data['title']="Demonstration";
+      $data['title']="Page: ".$slug;
       $data['message']="ba-da-boom";
 
-
       $this->view="demo/pages/".$slug;
-      // $data['content']=$this->pages($slug);
 
       $this->load->view('demo/pages/'.$slug,$data);
     }

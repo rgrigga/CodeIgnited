@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/img/thinker/favicon.png">
+        <link rel="shortcut icon" href="<?= base_url() ?>/img/thinker/favicon.png">
         <title>Demo</title>
 
         <link href="/dist/css/bootstrap.min.css" rel="stylesheet">

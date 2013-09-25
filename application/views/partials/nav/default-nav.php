@@ -1,4 +1,3 @@
-
 <ul>
 	<li class="nav-label"><strong>Default-Nav:</strong></li>
 	<li><a href="/">Home</a></li>

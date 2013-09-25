@@ -1,6 +1,7 @@
 <ul>
 	<li><a href="/">Home</a></li>
 	<li><a href="/demo">Demo Home</a></li>
+	<li><a href="/news">News Demo</a></li>
 
 <?php 
 
@@ -25,5 +26,6 @@ foreach ($mypages as $item) {
 }
 
 ?>
-<li><a href="/api/demo">API Demo</a></li>
+<li><a href="/api/demo">Demo API</a></li>
+<li><a href="/api/news">News API</a></li>
 </ul>
