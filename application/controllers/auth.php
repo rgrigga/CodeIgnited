@@ -18,7 +18,7 @@ class Auth extends MY_Controller {
         if ($this->get->sent()) {
             if ($this->ion_auth->login($this->get->username, $this->get->password)) {
                 if ($this->ion_auth->is_admin()) {
-                    redirect('welcome'); //if you have a special admin area you can redirect them here:
+                    redirect('admin/index'); //if you have a special admin area you can redirect them here:
                 } else {
                     redirect('welcome');
                 }

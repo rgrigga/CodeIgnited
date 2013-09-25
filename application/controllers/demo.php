@@ -6,13 +6,16 @@ class Demo extends MY_Controller {
 
         parent::__construct();
         $this->load->library('gristech');
+        $this->load->model('news_model');
         
-        $this->template='template/megacorp';
+        $this->template='template/demo';
 
         $this->data['nav']='demo/partials/nav';
         $this->data['header']='demo/partials/header';
         $this->data['secondary']='demo/partials/secondary';
         $this->data['footer']='demo/partials/footer';
+        $this->data['news'] = $this->news_model->get_news();
+        $this->data['message'] = ENVIRONMENT." environment";
     }
 
     public function index() {
@@ -24,23 +27,27 @@ class Demo extends MY_Controller {
 
     }
 
-    private function pages($slug="home"){
+    // private function pages($slug="home"){
       
-      // $data['slug']=$slug;
-      // $data['title']="Demonstration";
+    //   // $data['slug']=$slug;
+    //   // $data['title']="Demonstration";
       
-      $this->view="demo/pages/".$slug;
-      // die(var_dump($this->view));
-      // var_dump($this->view);
-      // die();
-    }
+    //   // $this->view="demo/pages/".$slug;
+    //   // die(var_dump($this->view));
+    //   // var_dump($this->view);
+    //   // die();
+    // }
 
     public function page($slug="home"){
+      // die("BAM");
       // $this->view="demo/pages/".$slug;
       $data['slug']=$slug;
       $data['title']="Demonstration";
       $data['message']="ba-da-boom";
-      $data['content']=$this->pages($slug);
+
+
+      $this->view="demo/pages/".$slug;
+      // $data['content']=$this->pages($slug);
 
       $this->load->view('demo/pages/'.$slug,$data);
     }

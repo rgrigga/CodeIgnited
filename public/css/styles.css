@@ -38,9 +38,9 @@ h2 {
 
 }
 h3 {
-    color: #727272;
+/*    color: #727272;
     font-size:16px;
-    font-weight:500;
+    font-weight:500;*/
 }
 h4 {
 
@@ -58,6 +58,7 @@ h6 {
     margin:0 auto;
 }
 
+/*TOP*/
 .top {
     background: #fff; 
     padding-top:10px;
@@ -79,6 +80,9 @@ h6 {
     list-style: none;
     display: inline-block;
     padding:0 10px 0 10px;
+}
+img.pull-right{
+    float: right;
 }
 
 .nav {
@@ -215,3 +219,19 @@ blockquote{
     color:rgba(200,0,0,1);
     background-color: rgba(100,0,0,.3);
 }
+
+.well{
+    color:rgba(200,200,200,.5);
+    border-color: rgba(0,50,0,.3);
+    background-color: rgba(0,50,0,.1);
+}
+
+div.shaded{
+        /*background-color: fade(@belize, 25%);*/
+        background-color: rgba(10,50,150,.2);
+        min-width: 20px;
+        min-height: 20px;
+        margin-top: 5px;
+        padding: 10px;
+        border: solid black 3px;
+      }

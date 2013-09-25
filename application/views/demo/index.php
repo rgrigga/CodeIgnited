@@ -1,9 +1,6 @@
 <?php
 // die("views/demo/index");
-// function e2($str){ 
-// 	$str=htmlentities($str);
-// 	echo $str;
-// }
+
 
 ?>
 
@@ -29,7 +26,7 @@
 <p>Let's say we create a page with some very simple HTML content (no styling) in the views/demo/pages directory, like this:</p>
 
 <?php $str=file_get_contents(APPPATH."views/demo/pages/mypage.php"); ?>
-<pre><?php //e2($str); ?></pre>
+<pre><?php $this->gristech->e($str); ?></pre>
 
 <p>Now, you'll clearly notice the link "mypage" appears in the navigation menu.  Clicking the link leads the program to load this page for you.  You could also visit the page by manually typing this into your browser:</p>
 

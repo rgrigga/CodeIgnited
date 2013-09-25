@@ -6,12 +6,15 @@ class News_model extends CI_Model {
 		$this->load->database();
 	}
 
-	public function get_news($slug = FALSE)
+	// public function get($slug);
+
+	public function get_news($slug = FALSE,$limit='3')
 	{
 		if ($slug === FALSE)
 		{
 			//Get all
-			$query = $this->db->get('news');
+			$this->db->from('news')->limit($limit)->order_by('id','DESC');
+			$query = $this->db->get();
 			return $query->result_array();
 		}
 
@@ -19,6 +22,7 @@ class News_model extends CI_Model {
 		$query = $this->db->get_where('news', array('slug' => $slug));
 		return $query->row_array();
 	}
+
 
 	public function set_news()
 	{
