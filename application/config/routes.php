@@ -48,7 +48,9 @@ $route['demo'] = 'demo';
 // $route['(:any)'] = 'pages/view/$1';
 // $route['default_controller'] = 'pages/view';
 
-
+// Box:
+$route['box/(:any)']='box/bam';
+$route['box']='box';
 
 
 // $route['default_controller'] = 'auth';

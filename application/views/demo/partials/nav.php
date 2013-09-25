@@ -25,5 +25,5 @@ foreach ($mypages as $item) {
 }
 
 ?>
-<li><a href="api/demo">API</a></li>
+<li><a href="/api/demo">API Demo</a></li>
 </ul>

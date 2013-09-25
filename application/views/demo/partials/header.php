@@ -1,3 +1,4 @@
 <header>
-	Welcome to the demo
+	demo header
+
 </header>

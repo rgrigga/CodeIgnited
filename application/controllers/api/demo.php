@@ -4,7 +4,8 @@ if (!defined('BASEPATH'))
 
 class Demo extends MY_Controller {
     public function index() {
-        $this->out = array('test' => true,'message'=> 'hello!');
+    	$msg="This doesn't do much yet, but it works!";
+        $this->out = array('test' => true,'message'=> $msg);
     }
     public function smallest($data=null){
     	$data=array("one"=>"foo","two"=>"bar");
